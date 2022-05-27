@@ -25,6 +25,7 @@ def compare_target_and_node(tree, target):
     elif target == tree.value:
         return None
 
+
 # This is the class of the input tree. Do not edit.
 class BST:
     def __init__(self, value):
