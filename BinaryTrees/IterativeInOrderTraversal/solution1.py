@@ -7,10 +7,12 @@ def iterativeInOrderTraversal(tree, callback):
                 nextNode = currentNode.left
             else:
                 callback(currentNode)
-                nextNode = currentNode.right if currentNode.right is not None else currentNode.parent
+                nextNode = currentNode.right \
+                    if currentNode.right is not None else currentNode.parent
         elif previousNode == currentNode.left:
-                callback(currentNode)
-                nextNode = currentNode.right if currentNode.right is not None else currentNode.parent
+            callback(currentNode)
+            nextNode = currentNode.right \
+                if currentNode.right is not None else currentNode.parent
         else:
             nextNode = currentNode.parent
         previousNode = currentNode
